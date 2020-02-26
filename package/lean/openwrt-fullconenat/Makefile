@@ -55,10 +55,9 @@ define Build/Compile
 	+$(MAKE) $(PKG_JOBS) -C "$(LINUX_DIR)" \
         CROSS_COMPILE="$(TARGET_CROSS)" \
         ARCH="$(LINUX_KARCH)" \
-        SUBDIRS="$(PKG_BUILD_DIR)" \
-        EXTRA_CFLAGS="$(BUILDFLAGS)" \
-        modules
-	$(call Build/Compile/Default)
+        M="$(PKG_BUILD_DIR)" \
+        EXTRA_CFLAGS="$(BUILDFLAGS)"
+ 	$(call Build/Compile/Default)
 endef
 
 $(eval $(call BuildPackage,iptables-mod-fullconenat))
