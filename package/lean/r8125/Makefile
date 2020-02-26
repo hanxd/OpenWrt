@@ -81,6 +81,7 @@ define KernelPackage/r8125
   VERSION:=$(LINUX_VERSION)+$(PKG_VERSION)-$(BOARD)-$(PKG_RELEASE)
   FILES:= $(PKG_BUILD_DIR)/r8125.ko
   AUTOLOAD:=$(call AutoProbe,r8125)
+  DEPENDS:= @!LINUX_5_4
 endef
 
 define Package/r8125/description
