@@ -21,9 +21,9 @@ Signed-off-by: Christian Lamparter <chunkeey@googlemail.com>
 
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
-@@ -126,6 +126,18 @@ config INTEL_MID_PTI
- 	  an Intel Atom (non-netbook) mobile device containing a MIPI
- 	  P1149.7 standard implementation.
+@@ -151,6 +151,18 @@ config SGI_IOC4
+ 	  If you have an SGI Altix with an IOC4-based card say Y.
+ 	  Otherwise say N.
  
 +config OWL_LOADER
 +	tristate "Owl loader for initializing Atheros PCI(e) Wifi chips"
@@ -42,10 +42,10 @@ Signed-off-by: Christian Lamparter <chunkeey@googlemail.com>
  	depends on PCI
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
-@@ -14,6 +14,7 @@ obj-$(CONFIG_ATMEL_TCLIB)	+= atmel_tclib
+@@ -12,6 +12,7 @@ obj-$(CONFIG_ATMEL_TCLIB)	+= atmel_tclib
  obj-$(CONFIG_DUMMY_IRQ)		+= dummy-irq.o
  obj-$(CONFIG_ICS932S401)	+= ics932s401.o
- obj-$(CONFIG_LKDTM)		+= lkdtm/
+ obj-$(CONFIG_LKDTM)		+= lkdtm.o
 +obj-$(CONFIG_OWL_LOADER)	+= owl-loader.o
  obj-$(CONFIG_TIFM_CORE)       	+= tifm_core.o
  obj-$(CONFIG_TIFM_7XX1)       	+= tifm_7xx1.o
