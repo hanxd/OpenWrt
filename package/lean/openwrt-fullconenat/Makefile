@@ -57,7 +57,7 @@ define Build/Compile
         ARCH="$(LINUX_KARCH)" \
         M="$(PKG_BUILD_DIR)" \
         EXTRA_CFLAGS="$(BUILDFLAGS)"
- 	$(call Build/Compile/Default)
+	$(call Build/Compile/Default)
 endef
 
 $(eval $(call BuildPackage,iptables-mod-fullconenat))
